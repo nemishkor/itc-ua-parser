@@ -4,7 +4,7 @@ services:
   app:
     build: ./docker/app
     volumes:
-      - "./:/var/www"
+      - "./parser:/var/www"
       - "./docker/app/supervisor/:/etc/supervisor/conf.d/:ro"
     depends_on:
       - mysql
