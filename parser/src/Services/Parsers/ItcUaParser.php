@@ -67,7 +67,7 @@ class ItcUaParser implements ParserInterface {
             return $this->parseHomePage($document, $parseQuery);
         }
 
-        throw new Exception("Unknown page type");
+        throw new Exception(sprintf("Unknown page type. Body classes: %s", implode(', ', $bodyClasses)));
     }
 
     private function parseHomePage(DOMDocument $document, ParseQuery $parseQuery): Collection {

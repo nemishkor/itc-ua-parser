@@ -22,12 +22,12 @@ class Article {
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $title;
+    private $title = '';
 
     /**
      * @ORM\Column(type="text")
      */
-    private $content;
+    private $content = '';
 
     /**
      * @ORM\Column(type="datetime")
@@ -40,7 +40,7 @@ class Article {
     private $url;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="articles", cascade={"persist", "delete"})
+     * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="articles", cascade={"persist", "remove"})
      */
     private $categories;
 

@@ -14,7 +14,7 @@ class AbstractParser {
     /** @var ParserInterface[] */
     private array $parsers;
 
-    public function __construct(array $parsers) {
+    public function __construct(iterable $parsers) {
         $this->parsers = (function (ParserInterface ...$parsers) {
             return $parsers;
         })(
