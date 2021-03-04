@@ -40,7 +40,7 @@ class Article {
     private $url;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="articles")
+     * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="articles", cascade={"persist", "delete"})
      */
     private $categories;
 
